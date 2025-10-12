@@ -7,7 +7,7 @@ import numpy as np
 from typing import List, Dict, Tuple
 import time
 
-from algorithms.best_response import BestResponseComputer
+from algo.best_response import BestResponseComputer
 
 
 class FictitiousPlay:
@@ -178,7 +178,7 @@ class FictitiousPlay:
         final_welfare = self.auction.compute_social_welfare(winners)
         
         # Compute optimal welfare for comparison
-        from environment.valuation_generator import ValuationGenerator
+        from environment.valuation import ValuationGenerator
         generator = ValuationGenerator(self.auction.config)
         optimal_allocation, optimal_welfare = generator.compute_optimal_allocation(
             self.auction.base_valuations

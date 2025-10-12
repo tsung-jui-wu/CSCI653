@@ -5,7 +5,10 @@ Complete example: Run fictitious play and analyze results.
 import numpy as np
 import matplotlib.pyplot as plt
 import sys
-sys.path.append('..')
+import os
+
+# Add project root to path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from config.config import get_small_experiment, get_medium_experiment
 from environment.valuation import ValuationGenerator, print_valuation_summary
