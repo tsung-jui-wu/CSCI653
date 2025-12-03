@@ -10,16 +10,16 @@ This project solves a complex auction problem: **How do multiple entities bid op
 
 Imagine a government auctioning **M spectrum licenses** to **N telecommunications companies**:
 - Each company values licenses differently (e.g., AT&T values urban areas more than rural)
-- Each company has a **budget constraint** - limited money to spend across all licenses
+- Each company has a **budget constraint**
 - Some licenses are **complementary** - worth more when won together (e.g., adjacent frequency bands)
-- All companies bid simultaneously in sealed envelopes (can't see others' bids)
+- All companies bid simultaneously (can't see others' bids)
 - **Highest bidder wins** each license and pays their bid amount
 
 **Key Question**: What bidding strategy should each company use?
 
-The answer is the **Nash Equilibrium** - a stable state where no company can improve their profit by changing their strategy alone.
+Find the **Nash Equilibrium** - a stable state where no company can improve their profit by changing their strategy alone.
 
-### The Algorithm: Fictitious Play with Monte Carlo Sampling
+### Algorithm: Fictitious Play with Monte Carlo Sampling
 
 **Fictitious Play** is an iterative learning algorithm where each player repeatedly best-responds to the historical behavior of opponents:
 
@@ -49,7 +49,7 @@ The answer is the **Nash Equilibrium** - a stable state where no company can imp
 ## 📸 Results
 
 
-## 🚀 High Performance Computing: Making it Fast
+## 🚀 High Performance Computing
 
 The computational bottleneck is **Monte Carlo sampling**: evaluating thousands of auction simulations per iteration.
 
@@ -82,8 +82,6 @@ Parallel (fast):
   All run simultaneously → 8x speedup potential
 ```
 
-**Implementation**: Python `multiprocessing` library distributes simulations across all CPU cores, similar to OpenMP in C/C++.
-
 ## 📊 Results and Performance
 
 ### Algorithm Convergence to Nash Equilibrium
@@ -103,8 +101,6 @@ pip install numpy matplotlib
 # Run sequential vs parallel comparison
 python experiments/run_parallel.py
 ```
-
-### What You'll See
 
 **Console Output:**
 ```
