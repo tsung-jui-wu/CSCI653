@@ -2,18 +2,6 @@
 
 A High Performance Computing implementation of game-theoretic algorithms to find Nash equilibrium in multi-entity spectrum license auctions with budget constraints.
 
-## 📸 Results at a Glance
-
-### Algorithm Convergence to Nash Equilibrium
-![Algorithm Results](results/small_test_results.png)
-*The algorithm successfully finds Nash equilibrium: welfare converges to optimal, entity payoffs stabilize, bids stop changing, and licenses are efficiently allocated.*
-
-### HPC Performance: Sequential vs Parallel
-![Performance Comparison](results/small_test_comparison.png)
-*Parallel implementation achieves 3-7x speedup: both methods find identical solutions, but parallel version is significantly faster by distributing Monte Carlo simulations across CPU cores.*
-
----
-
 ## 🎯 What This Project Does
 
 This project solves a complex auction problem: **How do multiple entities bid optimally in a simultaneous spectrum license auction?**
@@ -55,7 +43,11 @@ The answer is the **Nash Equilibrium** - a stable state where no company can imp
 3. Converged bids = Approximate Nash Equilibrium
 ```
 
+---
+
 **Why Monte Carlo?** Since we don't know exactly what opponents will bid (only their historical patterns), we sample many possible scenarios and choose the bid that performs best **on average**.
+## 📸 Results
+
 
 ## 🚀 High Performance Computing: Making it Fast
 
@@ -93,6 +85,14 @@ Parallel (fast):
 **Implementation**: Python `multiprocessing` library distributes simulations across all CPU cores, similar to OpenMP in C/C++.
 
 ## 📊 Results and Performance
+
+### Algorithm Convergence to Nash Equilibrium
+![Algorithm Results](results/small_test_results.png)
+*The algorithm successfully finds Nash equilibrium: welfare converges to optimal, entity payoffs stabilize, bids stop changing, and licenses are efficiently allocated.*
+
+### HPC Performance: Sequential vs Parallel
+![Performance Comparison](results/small_test_comparison.png)
+*Parallel implementation achieves 3-7x speedup: both methods find identical solutions, but parallel version is significantly faster by distributing Monte Carlo simulations across CPU cores.*
 
 ### Run the Comparison
 
