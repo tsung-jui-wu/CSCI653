@@ -2,6 +2,18 @@
 
 A High Performance Computing implementation of game-theoretic algorithms to find Nash equilibrium in multi-entity spectrum license auctions with budget constraints.
 
+## 📸 Results at a Glance
+
+### Algorithm Convergence to Nash Equilibrium
+![Algorithm Results](results/small_test_results.png)
+*The algorithm successfully finds Nash equilibrium: welfare converges to optimal, entity payoffs stabilize, bids stop changing, and licenses are efficiently allocated.*
+
+### HPC Performance: Sequential vs Parallel
+![Performance Comparison](results/small_test_comparison.png)
+*Parallel implementation achieves 3-7x speedup: both methods find identical solutions, but parallel version is significantly faster by distributing Monte Carlo simulations across CPU cores.*
+
+---
+
 ## 🎯 What This Project Does
 
 This project solves a complex auction problem: **How do multiple entities bid optimally in a simultaneous spectrum license auction?**
@@ -157,7 +169,9 @@ Performance Analysis:
 
 ### Visualization Output
 
-The script generates a comprehensive 6-panel comparison figure saved as `results/comparison.png`:
+The script generates a comprehensive 6-panel comparison figure (shown at the top of this README) saved as `results/comparison.png`.
+
+**What each panel shows:**
 
 | Panel | What It Shows |
 |-------|---------------|
@@ -167,6 +181,8 @@ The script generates a comprehensive 6-panel comparison figure saved as `results
 | **Convergence Speed** | How fast bids stabilize (log scale) |
 | **Final Payoffs** | Each entity's profit - verifies both methods give same answer |
 | **Throughput** | Samples/second comparison showing parallel advantage |
+
+📖 **For detailed explanation of how to read each panel, see [VISUAL_GUIDE.md](VISUAL_GUIDE.md)**
 
 ## 🎓 Key Metrics Explained
 
@@ -285,6 +301,8 @@ config_name = 'large'   # 30-60 min total, best speedup demonstration
 ## 📚 Project Documentation
 
 - **[README.md](README.md)** (this file): Overview, results, and interpretation
+- **[VISUAL_GUIDE.md](VISUAL_GUIDE.md)**: Detailed explanation of all plots and how to read them
+- **[OUTPUT_GUIDE.md](OUTPUT_GUIDE.md)**: Understanding console output and saved results
 - **[IMPLEMENTATION_GUIDE.md](IMPLEMENTATION_GUIDE.md)**: Technical details, code structure, extending the project
 - **[PARALLEL_IMPLEMENTATION.md](PARALLEL_IMPLEMENTATION.md)**: Deep dive into HPC parallelization strategy
 
