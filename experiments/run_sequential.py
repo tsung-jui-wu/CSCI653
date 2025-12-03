@@ -24,7 +24,8 @@ def run_complete_experiment():
     print(" SETUP")
     print("="*70)
     
-    config = get_medium_experiment()
+    # config = get_medium_experiment()
+    config = get_small_experiment()
     print(f"Experiment: {config.experiment_name}")
     print(f"Entities: {config.auction.n_entities}")
     print(f"Licenses: {config.auction.n_licenses}")

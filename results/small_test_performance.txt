@@ -1,0 +1,31 @@
+================================================================================
+HPC PERFORMANCE COMPARISON RESULTS
+================================================================================
+
+CONFIGURATION
+----------------------------------------
+Experiment: small_test
+Entities: 3
+Licenses: 5
+Max Iterations: 100
+MC Samples: 500
+CPU Cores: 32
+
+TIMING RESULTS
+----------------------------------------
+Sequential Runtime:  562.27 seconds
+Parallel Runtime:    1047.36 seconds
+Speedup:             0.54x
+Parallel Efficiency: 1.7%
+Time Saved:          -485.09 seconds
+
+SOLUTION QUALITY
+----------------------------------------
+Sequential - Converged: True, Iterations: 46, Efficiency: 90.0%
+Parallel   - Converged: True, Iterations: 11, Efficiency: 100.0%
+
+THROUGHPUT ANALYSIS
+----------------------------------------
+Total MC Samples: 3,450,000
+Sequential Throughput: 6,136 samples/sec
+Parallel Throughput:   3,294 samples/sec
