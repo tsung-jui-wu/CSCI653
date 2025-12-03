@@ -318,11 +318,6 @@ config_name = 'large'   # 30-60 min total, best speedup demonstration
 - Dynamic learning rates for faster convergence
 - Multi-round auction formats
 
-### HPC Enhancements
-- **GPU acceleration**: Offload simulations to CUDA for 10-100x speedup
-- **MPI distributed computing**: Scale across multiple machines for very large problems
-- **Hybrid parallelism**: Combine thread and process-based parallelism
-
 ### Applications
 - Real FCC auction data validation
 - Multi-agent reinforcement learning integration
